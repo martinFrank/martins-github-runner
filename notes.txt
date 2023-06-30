@@ -1,11 +1,2 @@
-setting parameters during run in docker-compose:
-docker-compose run -e MYENVVAR=actual_value my_service
-
-
-for martin-github-runner 
-export RUNNER_REPOSITORY_URL=https://github.com/martinFrank/martins-github-runner
-export RUNNER_TOKEN="from github" 
-sudo docker-compose -f "docker-compose.yml" up 
-
-
-sudo docker run -d -it --name my-github-runner -e RUNNER_NAME=my-runner -e GITHUB_ACCESS_TOKEN=token -e RUNNER_REPOSITORY_URL=https://github.com/... -v /var/run/docker.sock:/var/run/docker.sock tcardonne/github-runner
+#using gitlab runner from myoung34 - working for me!
+sudo docker run -d --restart always --name github-runner -e REPO_URL="https://github.com/martinFrank/poolserver" -e RUNNER_NAME="foo-runner" -e RUNNER_TOKEN="token" -v /var/run/docker.sock:/var/run/docker.sock myoung34/github-runner:latest
