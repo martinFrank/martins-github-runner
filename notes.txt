@@ -3,4 +3,4 @@ docker-compose run -e MYENVVAR=actual_value my_service
 
 
 for martin-github-runner 
-sudo docker-compose -f "docker-compose.yml" up -e RUNNER-REPOSITORY_URL="https://github.com/martinFrank/martins-github-runner" -e RUNNER_TOKEN="from github"
+RUNNER-REPOSITORY_URL="https://github.com/martinFrank/martins-github-runner" RUNNER_TOKEN="from github" sudo docker-compose -f "docker-compose.yml" up 
