@@ -5,7 +5,7 @@ services:
       image: tcardonne/github-runner:latest
       environment:
         RUNNER_NAME: "my-runner"
-        RUNNER-REPOSITORY_URL: "https://github.com/martinFrank/martins-github-runner"
+        RUNNER_REPOSITORY_URL: "https://github.com/martinFrank/martins-github-runner"
         RUNNER_LABELS: "myLabel"
         RUNNER_TOKEN: "RUNNER_TOKEN"
       volumes:
