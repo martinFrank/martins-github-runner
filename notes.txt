@@ -1,0 +1,6 @@
+setting parameters during run in docker-compose:
+docker-compose run -e MYENVVAR=actual_value my_service
+
+
+for martin-github-runner 
+sudo docker-compose -f "docker-compose.yml" up -e RUNNER-REPOSITORY_URL="https://github.com/martinFrank/martins-github-runner" -e RUNNER_TOKEN="from github"
